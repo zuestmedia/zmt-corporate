@@ -25,6 +25,9 @@ To install ZMT Corporate, go to Dashboard >> Themes >> Add new. Then enter "Corp
 
 == Changelog ==
 
+= 0.9.2 =
+* Update: BBPress compatibilty added
+
 = 0.9.1 =
 * Connected with ZM Update API
 
