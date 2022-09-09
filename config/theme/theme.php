@@ -8,9 +8,11 @@ class theme {
 
     $this->displayname = __( 'ZM Corporate', 'zmt-corporate' );
 
-    $this->version = '0.9.6';
+    $this->version = '0.9.7';
 
     $this->framework = 'zm-uikit';
+
+    $this->css_type = 'default';
 
     $this->css = '/assets/css/uikit.zmt-corporate.min.css';//Version 3.15.1
     $this->css_rtl = '/assets/css/uikit.zmt-corporate-rtl.min.css';//Version 3.15.1
