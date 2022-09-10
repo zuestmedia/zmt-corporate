@@ -35,6 +35,9 @@ Select the previously downloaded Theme-Zip-File and click "Install now".
 
 == Changelog ==
 
+= 0.9.9 =
+* Update: Less/CSS Navbar item padding is 0
+
 = 0.9.8 =
 * Update: CSS Buttons / button_dark into folder
 
