@@ -68,6 +68,12 @@ Select the previously downloaded Theme-Zip-File and click "Install now".
 
 == Changelog ==
 
+= 1.0.6 =
+* New: ArticleContainer imageoverlay -wrap and -size args added and new module function to display overlays
+* New: Assets/img/placeholder.png
+* Update: UIKIT overlay.less and transition.less
+* Fix: Element -> wraps with hr or img need close:false, so no closing tag is added (ContainerArticleList, Commentspagination)
+
 = 1.0.5 =
 * New: ThemeJSON update theme.json programmatically with pallette and gradient colors
 * Update: style.css removed some styles
@@ -181,9 +187,19 @@ Select the previously downloaded Theme-Zip-File and click "Install now".
 = 0.9.0 =
 * Initial release of ZMT Corporate
 
+== The theme uses the following third-party resources ==
+* uikit CSS, JS, Icons Framework
+License: MIT
+Source: https://getuikit.com/
+
+* screenshot.png and placeholder.png
+License: GPLv2 or later
+Source: own creation of ZuestMedia GmbH, contains Google Font Icon
+
+* Google Font Icons
+License: Apache License Version 2.0
+Source: https://fonts.google.com/icons
+
 == Copyright ==
 ZMT Corporate WordPress Theme, Copyright 2022 zmtheme.com
 ZMT Corporate is distributed under the terms of the GNU GPL
-
-== Resources ==
-* uikit © 2022 YOOtheme GmbH, MIT
