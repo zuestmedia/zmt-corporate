@@ -20,6 +20,7 @@ class BuildObject {
     */
     $this->theme =  Build::newClass( $n->getClass('theme') );
     $this->startercontent =  Build::newClass( $n->getClass('startercontent') );
+    $this->textstrings =     Build::newClass( $n->getClass('textstrings') );
 
 
 
