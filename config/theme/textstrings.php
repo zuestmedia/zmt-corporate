@@ -16,6 +16,9 @@ class textstrings {
     
     public $Skiptocontent;
     public $WarningVersionsare;
+
+    public $Loadmoreposts;
+    public $Loading;
     
     public $AuthorLink_label;
     
@@ -75,6 +78,10 @@ class textstrings {
       //Theme.php
       $this->Skiptocontent =      __( 'Skip to content', 'zmt-corporate' );
       $this->WarningVersionsare = __( 'Warning: Versions are not consistent!', 'zmt-corporate' );
+
+      //Render.php
+      $this->Loadmoreposts =      __( 'Load more posts', 'zmt-corporate' );
+      $this->Loading =      __( 'Loading...', 'zmt-corporate' );
 
       //modAuthorLink
       $this->AuthorLink_label =  __( 'Author: ', 'zmt-corporate' );
