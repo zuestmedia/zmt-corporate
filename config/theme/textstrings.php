@@ -137,7 +137,7 @@ class textstrings {
       $this->Search_label =      __( 'Search', 'zmt-corporate' );
       $this->Search_label_close =      __( 'Close search form', 'zmt-corporate' );
 
-      //modNavToggle
+      //modNavToggle / modMenu
       $this->NavToggle_label =      __( 'Open Menu', 'zmt-corporate' );
 
       //modOffcanvasContainer
