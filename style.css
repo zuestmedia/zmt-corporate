@@ -5,7 +5,7 @@ Author: ZuestMedia
 Author URI: https://zuestmedia.com/
 Text Domain: zmt-corporate
 Domain Path: /languages
-Version: 1.0.29
+Version: 1.1.0
 Description: ZMT Corporate is a lightweight, fast and fully customizable ZuestMedia WordPress Theme. This theme combines the new modern features of Gutenberg Block Editor respectively concepts from Full Site Editing (FSE) with the proven classic WordPress theme structure. For a quick start, import a preconfigured starter design directly from the Design-Explorer and get started right away. Use the Customizer to define global settings like colors, fonts, etc. and customize every part of your website. Thanks to the modular design, header and footer builders are a thing of the past. With the template editor (Pro) or by using a child theme you can easily create as many sections as you need in the header, center or footer area and arrange them as you need.
 Tags: blog, custom-logo, e-commerce, rtl-language-support, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, wide-blocks, footer-widgets, portfolio, left-sidebar, right-sidebar
 Requires at least: 4.7
@@ -25,185 +25,166 @@ ZMUPDAPI: zm
 	1. WP Blocks alignfull / alignwide
   2. wp-blocks margin
   3. wp-block optimizations
-  4. offcanvas_toggle rotation
-  5. -
-  6. -
-  7. -
-  8. Must Use: display settings hide on small medium large
+  4. Comments
+  5. Accessibility in Content
+  6. Must Use: display settings hide on small medium large
 
 ----------------------------------------------------------------------------- */
 /* 0. WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
-    margin: 5px 20px 20px 0;
+  margin: 5px 20px 20px 0;
 }
 
 .aligncenter,
 div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+  display: block;
+  margin: 5px auto 5px auto;
 }
 
 .alignright {
-    float:right;
-    margin: 5px 0 20px 20px;
+  float:right;
+  margin: 5px 0 20px 20px;
 }
 
 .alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+  float: left;
+  margin: 5px 20px 20px 0;
 }
 
 a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
+  float: right;
+  margin: 5px 0 20px 20px;
 }
 
 a img.alignnone {
-    margin: 5px 20px 20px 0;
+  margin: 5px 20px 20px 0;
 }
 
 a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+  float: left;
+  margin: 5px 20px 20px 0;
 }
 
 a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wp-caption, .gallery-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
-}
-
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
-}
-
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
-}
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
-
-.screen-reader-text:focus {
-	background-color: #eee;
-	clip: auto !important;
-	clip-path: none;
-	color: #444;
-	display: block;
-	font-size: 1em;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
-}
-
-.sticky{
-  /* adds additional style to sticky articles --> solve via post_class filter! */
-}
-
-.bypostauthor{
-  /* commentstyle from postauthor */
-}
-
-#cancel-comment-reply-link{
-  margin-left:10px;
-  font-size:1rem;
-}
-
-/* WordPress Content and Comments Links must be underlined */
-.zm-wp-block-container a,
-.uk-comment-body a {
-  text-decoration:underline;
-}
-.zm-wp-block-container a:hover:not(.wp-block-button__link),
-.uk-comment-body a:hover:not(.wp-block-button__link) {
-	transition: border 0.2s ease-in-out;
-	border-bottom:1px solid;
-	text-decoration:none;
-}
-
-/* -------------------------------------------------------------------------- */
-/*	1. WP Blocks alignfull / alignwide
-    -- braucht variable von main container width
-    -- these css-vars are built via js through zmtheme.js functions
-    -- zm-wp-block-width is located in configArticleContainer
-/* -------------------------------------------------------------------------- */
-
-.alignfull, .alignwide {
-  /*margin: 0 calc(50% - (50vw - var(--scrollbar-width)/2));/*better below, so margins will be kept in editor and frontend*/
-  margin-left: calc(50% - (50vw - var(--scrollbar-width)/2));
-  margin-right: calc(50% - (50vw - var(--scrollbar-width)/2));
-  max-width: calc(100vw - var(--scrollbar-width));
-  width: calc(100vw - var(--scrollbar-width));
-  /*padding-left:0 !important;
-  padding-right:0 !important;*/
-}
-
-@media (min-width: 1480px) {
-  .alignwide {
-    /*margin: 0 calc(( var(--zm-wp-block-width) - 80vw)/2);/*better below, so margins will be kept in editor and frontend*/
-    margin-left: calc(( var(--zm-wp-block-width) - 90vw)/2);
-    margin-right: calc(( var(--zm-wp-block-width) - 90vw)/2);
-    max-width: 90vw;
-    width: 90vw;
-  }
-}
-
-/*do not apply if has a sidebar and inside widgets!*/
-.no-align-widenfull .alignfull, .no-align-widenfull .alignwide, .widget .alignfull, .widget .alignwide {
-  max-width: 100%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.wp-caption, .gallery-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+border: 0;
+clip: rect(1px, 1px, 1px, 1px);
+clip-path: inset(50%);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute !important;
+width: 1px;
+word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+background-color: #eee;
+clip: auto !important;
+clip-path: none;
+color: #444;
+display: block;
+font-size: 1em;
+height: auto;
+left: 5px;
+line-height: normal;
+padding: 15px 23px 14px;
+text-decoration: none;
+top: 5px;
+width: auto;
+z-index: 100000;
+/* Above WP toolbar. */
+}
+
+.sticky{
+/* adds additional style to sticky articles --> solve via post_class filter! */
+}
+
+.bypostauthor{
+/* commentstyle from postauthor */
+}
+
+/* -------------------------------------------------------------------------- */
+/*	1. WP Blocks alignfull / alignwide
+  -- braucht variable von main container width
+  -- these css-vars are built via js through zmtheme.js functions
+  -- zm-wp-block-width is located in configArticleContainer
+/* -------------------------------------------------------------------------- */
+
+.alignfull, .alignwide {
+/*margin: 0 calc(50% - (50vw - var(--scrollbar-width)/2));/*better below, so margins will be kept in editor and frontend*/
+margin-left: calc(50% - (50vw - var(--scrollbar-width)/2));
+margin-right: calc(50% - (50vw - var(--scrollbar-width)/2));
+max-width: calc(100vw - var(--scrollbar-width));
+width: calc(100vw - var(--scrollbar-width));
+/*padding-left:0 !important;
+padding-right:0 !important;*/
+}
+
+@media (min-width: 1480px) {
+.alignwide {
+  /*margin: 0 calc(( var(--zm-wp-block-width) - 80vw)/2);/*better below, so margins will be kept in editor and frontend*/
+  margin-left: calc(( var(--zm-wp-block-width) - 90vw)/2);
+  margin-right: calc(( var(--zm-wp-block-width) - 90vw)/2);
+  max-width: 90vw;
+  width: 90vw;
+}
+}
+
+/*do not apply if has a sidebar and inside widgets!*/
+.no-align-widenfull .alignfull, .no-align-widenfull .alignwide, .widget .alignfull, .widget .alignwide {
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+
 /*remove width from block editor pages! so no overlapping*/
 .block-editor-page .alignfull{
-  width:inherit;
+width:inherit;
 }
 
 
@@ -211,80 +192,86 @@ a img.aligncenter {
 /*	2. wp-blocks margin
 /* -------------------------------------------------------------------------- */
 
-.wp-block-post-content > div,
-.zm-wp-block-container > div {
-  margin-top:40px;
-  /*margin-bottom:40px;*/
-}
-.wp-block-post-content > *:first-child,
-.zm-wp-block-container > *:first-child {
-  margin-top:0;
-}
-.wp-block-column, .wp-block-column > div, .wp-block-columns > .block-core-columns{
-  margin:0 !important;
+.wp-block-post-content  > * ,
+.zm-wp-block-container > * {
+margin-block-start: 20px;
+margin-block-end: 0;
 }
 
 /* -------------------------------------------------------------------------- */
 /*	3. wp-block optimizations
 /* -------------------------------------------------------------------------- */
 
-  /* replaces inherit */
-  pre.wp-block-verse{
-    font-family: revert;
-  }
-
-  /* align separator left by default not center */
-  .wp-block-separator {
-  	margin-left:0;
-  	margin-right:0;
-  }
-  .wp-block-separator.aligncenter{
-    margin-left:auto;
-  	margin-right:auto;
-  }
-
-/* -------------------------------------------------------------------------- */
-/*	4. offcanvas_toggle rotation
-    -- set class "zmrotate" to change via jquery in zmtheme.js
-/* -------------------------------------------------------------------------- */
-
-.zmrotated-45 {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition: transform 0.5s ease;
-    -moz-transition: transform 0.5s ease;
-    -ms-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
+/* align separator left by default not center */
+.wp-block-separator {
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+  padding-left:0;
+}
+.wp-block-separator:before {
+  padding-left:0;
+}  
+.wp-block-separator.aligncenter{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.wp-block-separator.aligncenter:before {
+  padding-left:2em;
 }
 
 /* -------------------------------------------------------------------------- */
-/*	8. Must Use: display settings hide on small medium large
+/*	4. Comments
+/* -------------------------------------------------------------------------- */
+
+#cancel-comment-reply-link{
+margin-left:10px;
+font-size:1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	5. Accessibility in Content
+/* -------------------------------------------------------------------------- */
+
+/* WordPress Content and Comments Links must be underlined */
+.zm-wp-block-container a,
+.uk-comment-body a {
+text-decoration:underline;
+}
+
+/* adds hover effect on links in paragraphs */
+.zm-wp-block-container p > a:hover,
+.uk-comment-body p > a:hover {
+transition: border 0.2s ease-in-out;
+border-bottom:1px solid;
+text-decoration:none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	6. Must Use: display settings hide on small medium large
 /* -------------------------------------------------------------------------- */
 /* Phone landscape and bigger */
 @media (max-width: 639px) {
-  .zm-hidden-mobile {
-    display: none !important;
-  }
+.zm-hidden-mobile {
+  display: none !important;
+}
 }
 /* Tablet landscape and bigger */
 @media screen and (max-width: 959px) and (min-width: 640px)  {
-  .zm-hidden-tablet {
-    display: none !important;
-  }
+.zm-hidden-tablet {
+  display: none !important;
+}
 }
 /* Tablet landscape and bigger */
 @media screen and (max-width: 1199px) and (min-width: 960px)  {
-  .zm-hidden-tablet-landscape {
-    display: none !important;
-  }
+.zm-hidden-tablet-landscape {
+  display: none !important;
+}
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .zm-hidden-desktop {
-    display: none !important;
-  }
+.zm-hidden-desktop {
+  display: none !important;
+}
 }
