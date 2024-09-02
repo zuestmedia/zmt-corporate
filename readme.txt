@@ -68,6 +68,9 @@ Select the previously downloaded Theme-Zip-File and click "Install now".
 
 == Changelog ==
 
+= 1.1.4 =
+* Fix: Switch to WP-Update-API
+
 = 1.1.3 =
 * New: Margin Horizontal Settings in nav
 * New: CSSVars navbar gap (padding)
