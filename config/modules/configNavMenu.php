@@ -8,9 +8,11 @@ class configNavMenu extends \ZMT\Theme\DefaultConfig\configNavMenu {
 
     parent::navbar();
 
-    $this->args['module_class'] = 'zmnavitems uk-overflow-auto uk-margin-left';
+    $this->args['module_class'] = 'zmnavitems uk-overflow-auto';
 
     $this->args['module_class_visibility'] = array('zm-hidden-mobile', 'zm-hidden-tablet');
+
+    $this->args['module_class_margin_horizontal'] = array('uk-margin-medium-left');
 
   }
 
@@ -20,7 +22,7 @@ class configNavMenu extends \ZMT\Theme\DefaultConfig\configNavMenu {
 
     $this->args['module_class_visibility'] = array('zm-hidden-tablet-landscape', 'zm-hidden-desktop');
 
-    $this->args['module_class'] = 'zmnavitems uk-margin-small-left';
+    $this->args['module_class_margin_horizontal'] = array('uk-margin-small-left');
 
   }
 

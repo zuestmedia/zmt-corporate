@@ -91,6 +91,12 @@ class configCssVars extends \ZMT\Theme\DefaultConfig\configCssVars {
 
     }
 
+    
+    protected function navbar() {
+      parent::navbar();
+      $this->args['navbar_padding'] = '15px';
+    }
+
     //if adding head, body, logo or navbar settings, must add corresponding function to config/globals.php!!!
 
 
