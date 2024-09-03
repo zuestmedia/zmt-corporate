@@ -24,9 +24,9 @@ class theme {
 
   function __construct(){
 
-    $this->displayname = __( 'ZMT Corporate', 'zmt-corporate' );
+    $this->displayname = __( 'Corporate', 'zmt-corporate' );
 
-    $this->version = '1.1.5';
+    $this->version = '1.1.6';
 
     $this->framework = 'zm-uikit';
 

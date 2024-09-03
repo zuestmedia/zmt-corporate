@@ -1,4 +1,4 @@
-=== ZMT Corporate ===
+=== Corporate ===
 Contributors: zuestmedia
 Requires at least: 4.7
 Tested up to: 6.6
@@ -6,11 +6,11 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-ZMT Corporate is a lightweight, fast and fully customizable ZuestMedia WordPress Theme.
+The Corporate Theme is a lightweight, fast and fully customizable ZuestMedia WordPress Theme.
 
 == Description ==
 
-[ZMT Corporate](https://zuestmedia.com/corporate/) is a lightweight, fast and fully customizable ZuestMedia WordPress Theme.
+The [Corporate Theme](https://zuestmedia.com/corporate/) is a lightweight, fast and fully customizable ZuestMedia WordPress Theme.
 
 This theme combines the new modern features of Gutenberg Block Editor respectively concepts from Full Site Editing (FSE) with the proven classic WordPress theme structure.
 
@@ -67,6 +67,10 @@ Go to Dashboard >> Appearance >> Themes >> Add New >> Upload Theme.
 Select the previously downloaded Theme-Zip-File and click "Install now".
 
 == Changelog ==
+
+= 1.1.6 =
+* Fix: NavMenu Dropdown_Navbar_Nav_* inverted color behavior
+* Fix: Naming
 
 = 1.1.5 =
 * Fix: Navbar Search inverted color behavior
