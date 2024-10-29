@@ -26,7 +26,7 @@ class theme {
 
     $this->displayname = __( 'Corporate', 'zmt-corporate' );
 
-    $this->version = '1.1.8';
+    $this->version = '1.1.9';
 
     $this->framework = 'zm-uikit';
 
